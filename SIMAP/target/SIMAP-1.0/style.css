@@ -1,0 +1,1656 @@
+/*index,Log-alu-pro-inv*/
+*{
+    background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+    margin: 0;
+}
+.encabezado{
+    width:100%;
+    height: 82px;
+    background: linear-gradient(to right, #373b44, #4286f4);
+    margin-top: 31px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    box-shadow: 7px 13px 10px #000;
+}
+h1{
+    font-family: monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    background: none;
+    color: #FFFFFF;
+}
+.flecha{
+    margin-top: 35px;
+    display: grid;
+    place-items: center;
+}
+.flecha a{
+    background: none
+}
+.atras{
+    background-image: url("imagenes/fl5.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    border: 0;
+    height: 100px;
+    width: 155px;
+    color:white;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.mainForm{
+    margin-top: 25px;
+    display: grid;
+    place-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 7px 13px 30px #000;
+}
+p{
+    font-family: monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 48px;
+    text-align: center;
+    background: #007FB8;
+    color:black;
+}
+.sec{
+    margin-top: 50px;
+    width: 80%;
+    height: 40px;
+    border: 0;
+    text-align: center;
+    font-size:15px;
+    background:white;
+    border-radius: 15px;
+    color: gray;
+}
+input{
+    margin-top: 50px;
+    width: 80%;
+    height: 40px;
+    border: 0;
+    text-align: center;
+    font-size:15px;
+    background:white;
+    border-radius: 15px;
+}
+.enviar{
+    background: #007FB8;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+.enviar:hover{
+    background-color: #6dd5fa;
+    box-shadow: 0 0 10px #6dd5fa, 0 0 40px #6dd5fa, 0 0 80px #6dd5fa;
+}
+.img{
+    height: 205px;
+    width: 205px;
+    background: black;
+    margin-top: 12.5px;
+    margin-bottom:12.5px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+}
+
+/*index*/
+.log{
+    background-image: url("imagenes/log.png");
+    height: 95%;
+    width: 95%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #005074;
+}
+.log:hover{
+    background-color: #007FB8;
+    box-shadow: 0 0 10px #007FB8, 0 0 40px #007FB8, 0 0 80px #007FB8;
+}
+.reg{
+    background-image: url("imagenes/reg.png");
+    height: 95%;
+    width: 95%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #005074;
+}
+.reg:hover{
+    background-color: #007FB8;
+    box-shadow: 0 0 10px #007FB8, 0 0 40px #007FB8, 0 0 80px #007FB8;
+}
+button{
+    border: 0;
+    color: white;
+    font-size: 15px;
+}
+h2{
+    background: none;
+    font-family: monospace;
+    font-size: 40px;
+}
+
+/*Log, Reg*/
+.alm{
+    background-image: url("imagenes/alm.png");
+    height: 95%;
+    width: 95%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #005074;
+}
+.alm:hover{
+    background-color: #007FB8;
+    box-shadow: 0 0 10px #007FB8, 0 0 40px #007FB8, 0 0 80px #007FB8;
+}
+.prf{
+    background-image: url("imagenes/prf.png");
+    height: 95%;
+    width: 95%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #005074;
+}
+.prf:hover{
+    background-color: #007FB8;
+    box-shadow: 0 0 10px #007FB8, 0 0 40px #007FB8, 0 0 80px #007FB8;
+}
+.inv{
+    background-image: url("imagenes/per.png");
+    height: 95%;
+    width: 95%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #005074;
+}
+.inv:hover{
+    background-color: #007FB8;
+    box-shadow: 0 0 10px #007FB8, 0 0 40px #007FB8, 0 0 80px #007FB8;
+}
+
+/*Principal*/
+.encabezado1{
+    width: 100%;
+    height: 82px;
+    background: linear-gradient(to right, #373b44, #4286f4);
+    margin-top: 31px;
+    align-items: center;
+    display: inline-flex;
+}
+.encabezado2{
+    width:60%;
+    height: 125px;
+    background:#BAE7FB ;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: inline-flex;
+    place-items: center;
+    border-radius: 15px;
+}
+.p2{
+    font-family: monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 48px;
+    text-align: center;
+    background: #BAE7FB;
+    color:black;
+}
+.titulo{
+    background: none;
+    width: 100%;
+}
+.imgp{
+    background: none;
+    height: 125px;
+    width: 125px;
+}
+.imgE{
+    background-size: cover;
+    background-image: url("imagenes/lp.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    width: 95%;
+    height: 95%;
+    border: 0;
+    border-radius: 15px;
+}
+.imgE:hover{
+    background-color: #ffff;
+    box-shadow: 0 0 10px #ffff, 0 0 40px #ffff, 0 0 80px #ffff;
+}
+.imgC{
+    background-size: cover;
+    background-image: url("imagenes/consultar.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    width: 95%;
+    height: 95%;
+    border: 0;
+    border-radius: 15px;
+}
+.imgC:hover{
+    background-color: #2980b9;
+    box-shadow: 0 0 10px #2980b9, 0 0 40px #2980b9, 0 0 80px #2980b9;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/*Con-espacios*/
+.cef{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.sec2{
+    width: 30%;
+    height: 40px;
+    border: 0;
+    text-align: center;
+    font-size:15px;
+    background:white;
+    border-radius: 15px;
+    color: black;
+}
+.sec2 option{
+    background: white ;
+}
+.inac{
+    display: none;
+}
+.B1, .B2, .B3, .B4, .B5, .B6, .B7, .B8, .B9, .B10, .B11, .B12, .B13, .B14, .B15, .B16, .B17, .B18, .B19, .B20,
+.B21, .B22, .B23, .B24, .B25, .B26, .B27, .B28, .B29, .B30, .B31, .B32, .B33, .B34, .B35, .B36, .B37, .B38, .B39, .B40{
+    background: rgb(102, 255, 0);
+    opacity: 0.4;
+}
+.pb{
+    display: flex;
+    background-image: url("imagenes/PlantaBaja.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 981px;
+    height: 855px;
+}
+.pb .B1{
+    margin-left: 25px;
+    margin-top: 25px;
+    position: absolute;
+    width: 120px;
+    height: 206px;
+    cursor: pointer;
+}
+.pb .B2{
+    margin-left: 190px;
+    margin-top: 82px;
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    cursor: pointer;
+}
+.pb .B3{
+    margin-left: 240px;
+    margin-top: 82px;
+    position: absolute;
+    width: 85px;
+    height: 150px;
+    cursor: pointer;
+}
+.pb .B4{
+    margin-left: 325px;
+    margin-top: 82px;
+    position: absolute;
+    width: 135px;
+    height: 75px;
+    cursor: pointer;
+}
+.pb .B5{
+    margin-top: 157px;
+    margin-left: 325px;
+    position: absolute;
+    width: 135px;
+    height: 75px;
+    cursor: pointer;
+}
+.pb .B6{
+    margin-top: 23px;
+    margin-left: 605px;
+    position: absolute;
+    width: 85px;
+    height: 80px;
+    cursor: pointer;
+}
+.pb .B7{
+    margin-top: 23px;
+    margin-left: 690px;
+    position: absolute;
+    width: 61px;
+    height: 80px;
+    cursor: pointer;
+}
+.pb .B8{
+    margin-top: 23px;
+    margin-left: 751px;
+    position: absolute;
+    width: 61px;
+    height: 80px;
+    cursor: pointer;
+}
+.pb .B9{
+    margin-top: 23px;
+    margin-left: 811px;
+    position: absolute;
+    width: 70px;
+    height: 80px;
+    cursor: pointer;
+}
+.pb .B10{
+    margin-top: 23px;
+    margin-left: 881px;
+    position: absolute;
+    width: 75px;
+    height: 139px;
+    cursor: pointer;
+}
+.pb .B11{
+    margin-top: 162px;
+    margin-left: 647px;
+    position: absolute;
+    width: 40px;
+    height: 64px;
+    cursor: pointer;
+}
+.pb .B12{
+    margin-top: 162px;
+    margin-left: 687px;
+    position: absolute;
+    width: 45px;
+    height: 64px;
+    cursor: pointer;
+}
+.pb .B13{
+    margin-top: 162px;
+    margin-left: 732px;
+    position: absolute;
+    width: 49px;
+    height: 64px;
+    cursor: pointer;
+}
+.pb .B14{
+    margin-top: 162px;
+    margin-left: 781px;
+    position: absolute;
+    width: 29px;
+    height: 64px;
+    cursor: pointer;
+}
+.pb .B15{
+    margin-top: 162px;
+    margin-left: 810px;
+    position: absolute;
+    width: 38px;
+    height: 64px;
+    cursor: pointer;
+}
+.pb .B16{
+    margin-top: 162px;
+    margin-left: 848px;
+    position: absolute;
+    width: 33px;
+    height: 64px;
+    cursor: pointer;
+}
+.pb .B17{
+    margin-top: 162px;
+    margin-left: 881px;
+    position: absolute;
+    width: 75px;
+    height: 64px;    
+    cursor: pointer;
+}
+.pb .B18{
+    margin-top: 231px;
+    margin-left: 25px;
+    position: absolute;
+    width: 220px;
+    height: 167px;    
+    cursor: pointer;
+}
+.pb .B19{
+    margin-top: 231px;
+    margin-left: 245px;
+    position: absolute;
+    width: 110px;
+    height: 167px;   
+    cursor: pointer;
+}
+.pb .B20{
+    margin-top: 230px;
+    margin-left: 680px;
+    position: absolute;
+    width: 88px;
+    height: 167px;  
+    cursor: pointer;
+}
+.pb .B21{
+    margin-top: 440px;
+    margin-left: 25px;
+    position: absolute;
+    width: 117px;
+    height: 212px;          
+    cursor: pointer;
+}
+.pb .B22{
+    margin-top: 440px;
+    margin-left: 142px;
+    position: absolute;
+    width: 102px;
+    height: 110px;
+    cursor: pointer;
+}
+.pb .B23{
+    margin-top: 440px;
+    margin-left: 241px;
+    position: absolute;
+    width: 67px;
+    height: 110px;    
+    cursor: pointer;
+}
+.pb .B24{
+    margin-top: 440px;
+    margin-left: 308px;
+    position: absolute;
+    width: 48px;
+    height: 110px;  
+    cursor: pointer;
+}
+.pb .B25{
+    margin-top: 440px;
+    margin-left: 356px;
+    position: absolute;
+    width: 95px;
+    height: 110px;   
+    cursor: pointer;
+}
+.pb .B26{
+    margin-top: 440px;
+    margin-left: 451px;
+    position: absolute;
+    width: 80px;
+    height: 110px;   
+    cursor: pointer;
+}
+.pb .B27{
+    margin-top: 453px;
+    margin-left: 605px;
+    position: absolute;
+    width: 146px;
+    height: 97px;   
+    cursor: pointer;
+}
+.pb .B28{
+    margin-top: 453px;
+    margin-left: 751px;
+    position: absolute;
+    width: 48px;
+    height: 97px;          
+    cursor: pointer;
+}
+.pb .B29{
+    margin-top: 453px;
+    margin-left: 799px;
+    position: absolute;
+    width: 45px;
+    height: 97px;     
+    cursor: pointer;
+}
+.pb .B30{
+    margin-top: 453px;
+    margin-left: 845px;
+    position: absolute;
+    width: 55px;
+    height: 97px;    
+    cursor: pointer;
+}
+.pb .B31{
+    margin-top: 453px;
+    margin-left: 899px;
+    position: absolute;
+    width: 58px;
+    height: 97px;    
+    cursor: pointer;
+}
+.pb .B32{
+    margin-top: 651px;
+    margin-left: 24px;
+    position: absolute;
+    width: 148px;
+    height: 170px;    
+    cursor: pointer;
+}
+.pb .B33{
+    margin-top: 651px;
+    margin-left: 172px;
+    position: absolute;
+    width: 135px;
+    height: 170px;    
+    cursor: pointer;
+}
+.pb .B34{
+    margin-top: 651px;
+    margin-left: 305px;
+    position: absolute;
+    width: 179px;
+    height: 80px;    
+    cursor: pointer;
+}
+.pb .B35{
+    margin-top: 765px;
+    margin-left: 606px;
+    position: absolute;
+    width: 100px;
+    height: 54px;   
+    cursor: pointer;
+}
+.pb .B36{
+    margin-top: 765px;
+    margin-left: 771px;
+    position: absolute;
+    width: 48px;
+    height: 54px;  
+    cursor: pointer;
+}
+.pb .B37{
+    margin-top: 765px;
+    margin-left: 820px;
+    position: absolute;
+    width: 67px;
+    height: 54px;
+    cursor: pointer;
+}
+.pb .B38{
+    margin-top: 765px;
+    margin-left: 887px;
+    position: absolute;
+    width: 68px;
+    height: 54px;
+    cursor: pointer;
+}
+.pb .B39{
+    margin-top: 700px;
+    margin-left: 905px;
+    position: absolute;
+    width: 50px;
+    height: 66px;
+    cursor: pointer;
+}
+.pb .B40{
+    margin-top: 590px;
+    margin-left: 905px;
+    position: absolute;
+    width: 50px;
+    height: 110px;
+    cursor: pointer;
+}
+.pb .B1:hover,.pb .B2:hover,.pb .B3:hover,.pb .B4:hover,
+.pb .B5:hover,.pb .B6:hover,.pb .B7:hover,.pb .B8:hover,
+.pb .B9:hover,.pb .B10:hover,.pb .B11:hover,.pb .B12:hover,
+.pb .B13:hover,.pb .B14:hover,.pb .B15:hover,.pb .B16:hover,
+.pb .B17:hover,.pb .B18:hover,.pb .B19:hover,.pb .B20:hover,
+.pb .B21:hover,.pb .B22:hover,.pb .B23:hover,.pb .B24:hover,
+.pb .B25:hover,.pb .B26:hover,.pb .B27:hover,.pb .B28:hover,
+.pb .B29:hover,.pb .B30:hover,.pb .B31:hover,.pb .B32:hover,
+.pb .B33:hover,.pb .B34:hover,.pb .B35:hover,.pb .B36:hover,
+.pb .B37:hover,.pb .B38:hover,.pb .B39:hover,.pb .B40:hover{
+    background-color: #6dd5fa;
+    box-shadow: 0 0 10px #6dd5fa, 0 0 40px #6dd5fa, 0 0 80px #6dd5fa;
+}
+.piso1{
+    display: flex;
+    background-image: url("imagenes/Piso1.jpg");
+    background-size: contain;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 981px;
+    height: 632px;
+}
+.piso1 .B1{
+    margin-top: 18px;
+    margin-left: 17px;
+    position: absolute;
+    width: 158.1px;
+    height: 210.12px;
+    cursor: pointer;
+}
+.piso1 .B2{
+    margin-top: 18px;
+    margin-left: 175.1px;
+    position: absolute;
+    width: 95.14px;
+    height: 104.71px;
+    cursor: pointer;
+}
+.piso1 .B3{
+    margin-top: 18px;
+    margin-left: 270.24px;
+    position: absolute;
+    width: 90.94px;
+    height: 104.71px;
+    cursor: pointer;
+}
+.piso1 .B4{
+    margin-top: 18px;
+    margin-left: 361.18px;
+    position: absolute;
+    width: 95.14px;
+    height: 104.71px;
+    cursor: pointer;
+}
+.piso1 .B5{
+    margin-top: 18px;
+    margin-left: 456.32px;
+    position: absolute;
+    width: 90.24px;
+    height: 104.71px;
+    cursor: pointer;
+}
+.piso1 .B6{
+    margin-top: 18px;
+    margin-left: 546.56px;
+    position: absolute;
+    width: 55.26px;
+    height: 104.71px;
+    cursor: pointer;
+}
+.piso1 .B7{
+    margin-top: 18px;
+    margin-left: 601.83px;
+    position: absolute;
+    width: 95.14px;
+    height: 104.71px;
+    cursor: pointer;
+}
+.piso1 .B8{
+    margin-top: 18px;
+    margin-left: 696.97px;
+    position: absolute;
+    width: 104.93px;
+    height: 104.71px;
+    cursor: pointer;
+}
+.piso1 .B9{
+    margin-top: 18px;
+    margin-left: 801.9px;
+    position: absolute;
+    width: 158.1px;
+    height: 210.12px;
+    cursor: pointer;
+}
+.piso1 .B10{
+    margin-top: 228.12px;
+    margin-left: 222.67px;
+    position: absolute;
+    width: 138.51px;
+    height: 167.25px;
+    cursor: pointer;
+}
+.piso1 .B11{
+    margin-top: 228px;
+    margin-left: 681px;
+    position: absolute;
+    width: 85.35px;
+    height: 170.76px;
+    cursor: pointer;
+}
+.piso1 .B12{
+    margin-top: 395.37px;
+    margin-left: 17px;
+    position: absolute;
+    width: 158.1px;
+    height: 210.12px;
+    cursor: pointer;
+}
+.piso1 .B13{
+    margin-top: 395.37px;
+    margin-left: 175.1px;
+    position: absolute;
+    width: 176.99px;
+    height: 110.33px;
+    cursor: pointer;
+}
+.piso1 .B14{
+    margin-top: 395.37px;
+    margin-left: 352.09px;
+    position: absolute;
+    width: 176.99px;
+    height: 110.33px;
+    cursor: pointer;
+}
+.piso1 .B15{
+    margin-top: 398.88px;
+    margin-left: 607.42px;
+    position: absolute;
+    width: 194.48px;
+    height: 106.82px;
+    cursor: pointer;
+}
+.piso1 .B16{
+    margin-top: 398.88px;
+    margin-left: 801.9px;
+    position: absolute;
+    width: 158.1px;
+    height: 210.12px;   
+    cursor: pointer;
+}
+.piso1 .B17, .piso1 .B18, .piso1 .B19, .piso1 .B20, .piso1 .B21,
+.piso1 .B22, .piso1 .B23, .piso1 .B24, .piso1 .B25, .piso1 .B26,
+.piso1 .B27, .piso1 .B28, .piso1 .B29, .piso1 .B30, .piso1 .B31,
+.piso1 .B32, .piso1 .B33, .piso1 .B34, .piso1 .B35, .piso1 .B36,
+.piso1 .B37, .piso1 .B38, .piso1 .B39, .piso1 .B40{
+    position: absolute;
+    background: none;
+    width: 1px;
+    height: 1px;
+}
+.piso1 .B1:hover,.piso1 .B2:hover,.piso1 .B3:hover,
+.piso1 .B4:hover,.piso1 .B5:hover,.piso1 .B6:hover,
+.piso1 .B7:hover,.piso1 .B8:hover,.piso1 .B9:hover,
+.piso1 .B10:hover,.piso1 .B11:hover,.piso1 .B12:hover,
+.piso1 .B13:hover,.piso1 .B14:hover,.piso1 .B15:hover, .piso1 .B16:hover{
+    background-color: #6dd5fa;
+    box-shadow: 0 0 10px #6dd5fa, 0 0 40px #6dd5fa, 0 0 80px #6dd5fa;
+}
+.piso2{
+    display: flex;
+    background-image: url("imagenes/Piso2.jpg");
+    background-size: contain;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 981px;
+    height: 632px;
+}
+.piso2 .B1{
+    margin-left: 22px;
+    margin-top: 23px;
+    position: absolute;
+    width: 158px;
+    height: 206px;
+    cursor: pointer;
+}
+.piso2 .B2{
+    margin-left: 180px;
+    margin-top: 23px;
+    position: absolute;
+    width: 95px;
+    height: 103px;
+    cursor: pointer;
+}
+.piso2 .B3{
+    margin-left: 275px;
+    margin-top: 23px;
+    position: absolute;
+    width: 89px;
+    height: 103px;
+    cursor: pointer;
+}
+.piso2 .B4{
+    margin-left: 364px;
+    margin-top: 23px;
+    position: absolute;
+    width: 95px;
+    height: 103px;    
+    cursor: pointer;
+}
+.piso2 .B5{
+    margin-left: 459px;
+    margin-top: 23px;
+    position: absolute;
+    width: 90px;
+    height: 103px;       
+    cursor: pointer;
+}
+.piso2 .B6{
+    margin-left: 549px;
+    margin-top: 23px;
+    position: absolute;
+    width: 55px;
+    height: 103px;      
+    cursor: pointer;
+}
+.piso2 .B7{
+    margin-left: 604px;
+    margin-top: 23px;
+    position: absolute;
+    width: 93px;
+    height: 103px;     
+    cursor: pointer;
+}
+.piso2 .B8{
+    margin-left: 697px;
+    margin-top: 23px;
+    position: absolute;
+    width: 104px;
+    height: 103px;      
+    cursor: pointer;
+}
+.piso2 .B9{
+    margin-left: 801px;
+    margin-top: 23px;
+    position: absolute;
+    width: 158px;
+    height: 205px;     
+    cursor: pointer;
+}
+.piso2 .B10{
+    margin-left: 224px;
+    margin-top: 229px;
+    position: absolute;
+    width: 140px;
+    height: 166px;     
+    cursor: pointer;
+}
+.piso2 .B11{
+    margin-left: 678px;
+    margin-top: 229px;
+    position: absolute;
+    width: 84px;
+    height: 166px;    
+    cursor: pointer;
+}
+.piso2 .B12{
+    margin-left: 22px;
+    margin-top: 395px;
+    position: absolute;
+    width: 104px;
+    height: 108px;       
+    cursor: pointer;
+}
+.piso2 .B13{
+    margin-left: 126px;
+    margin-top: 395px;
+    position: absolute;
+    width: 101px;
+    height: 108px;       
+    cursor: pointer;
+}
+.piso2 .B14{
+    margin-left: 227px;
+    margin-top: 395px;
+    position: absolute;
+    width: 74px;
+    height: 108px;           
+    cursor: pointer;
+}
+.piso2 .B15{
+    margin-left: 301px;
+    margin-top: 395px;
+    position: absolute;
+    width: 230px;
+    height: 108px;           
+    cursor: pointer;
+}
+.piso2 .B16{
+    margin-left: 605px;
+    margin-top: 395px;
+    position: absolute;
+    width: 104px;
+    height: 108px;           
+    cursor: pointer;
+}
+.piso2 .B17{
+    margin-left: 709px;
+    margin-top: 395px;
+    position: absolute;
+    width: 53px;
+    height: 108px;           
+    cursor: pointer;
+}
+.piso2 .B18{
+    margin-left: 762px;
+    margin-top: 395px;
+    position: absolute;
+    width: 197px;
+    height: 108px;           
+    cursor: pointer;
+}
+.piso2 .B19{
+    margin-left: 22px;
+    margin-top: 503px;
+    position: absolute;
+    width: 133px;
+    height: 100px;               
+    cursor: pointer;
+}
+.piso2 .B20{
+    margin-left: 801px;
+    margin-top: 503px;
+    position: absolute;
+    width: 158px;
+    height: 100px;               
+    cursor: pointer;
+}
+.piso2 .B21,
+.piso2 .B22, .piso2 .B23, .piso2 .B24, .piso2 .B25, .piso2 .B26,
+.piso2 .B27, .piso2 .B28, .piso2 .B29, .piso2 .B30, .piso2 .B31,
+.piso2 .B32, .piso2 .B33, .piso2 .B34, .piso2 .B35, .piso2 .B36,
+.piso2 .B37, .piso2 .B38, .piso2 .B39, .piso2 .B40{
+    position: absolute;
+    background: none;
+    width: 1px;
+    height: 1px;
+}
+.piso2 .B1:hover,.piso2 .B2:hover,.piso2 .B3:hover,
+.piso2 .B4:hover,.piso2 .B5:hover,.piso2 .B6:hover,
+.piso2 .B7:hover,.piso2 .B8:hover,.piso2 .B9:hover,
+.piso2 .B10:hover,.piso2 .B11:hover,.piso2 .B12:hover,
+.piso2 .B13:hover,.piso2 .B14:hover,.piso2 .B15:hover,
+.piso2 .B16:hover,.piso2 .B17:hover,.piso2 .B18:hover,
+.piso2 .B19:hover,.piso2 .B20:hover{
+    background-color: #6dd5fa;
+    box-shadow: 0 0 10px #6dd5fa, 0 0 40px #6dd5fa, 0 0 80px #6dd5fa;
+}
+.piso3{
+    display: flex;
+    background-image: url("imagenes/Piso3.jpg");
+    background-size: contain;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 981px;
+    height: 632px;
+}
+.piso3 .B1{
+    margin-left: 18px;
+    margin-top: 20px;
+    position: absolute;
+    width: 119px;
+    height: 104px;
+    cursor: pointer;
+}
+.piso3 .B2{
+    margin-left: 137px;
+    margin-top: 20px;
+    position: absolute;
+    width: 101px;
+    height: 104px;
+    cursor: pointer;
+}
+.piso3 .B3{
+    margin-left: 238px;
+    margin-top: 20px;
+    position: absolute;
+    width: 122px;
+    height: 104px;
+    cursor: pointer;
+}
+.piso3 .B4{
+    margin-left: 360px;
+    margin-top: 20px;
+    position: absolute;
+    width: 96px;
+    height: 104px;
+    cursor: pointer;
+}
+.piso3 .B5{
+    margin-left: 456px;
+    margin-top: 20px;
+    position: absolute;
+    width: 90px;
+    height: 104px;
+    cursor: pointer;
+}
+.piso3 .B6{
+    margin-left: 546px;
+    margin-top: 20px;
+    position: absolute;
+    width: 56px;
+    height: 104px;
+    cursor: pointer;
+}
+.piso3 .B7{
+    margin-left: 602px;
+    margin-top: 20px;
+    position: absolute;
+    width: 92px;
+    height: 104px;
+    cursor: pointer;
+}
+.piso3 .B8{
+    margin-left: 694px;
+    margin-top: 20px;
+    position: absolute;
+    width: 103px;
+    height: 104px;
+    cursor: pointer;
+}
+.piso3 .B9{
+    margin-left: 797px;
+    margin-top: 20px;
+    position: absolute;
+    width: 160px;
+    height: 206px;
+    cursor: pointer;
+}
+.piso3 .B10{
+    margin-left: 223px;
+    margin-top: 231px;
+    position: absolute;
+    width: 137px;
+    height: 164px;
+    cursor: pointer;
+}
+.piso3 .B11{
+    margin-left: 678px;
+    margin-top: 231px;
+    position: absolute;
+    width: 74px;
+    height: 164px;
+    cursor: pointer;
+}
+.piso3 .B12{
+    margin-left: 18px;
+    margin-top: 395px;
+    position: absolute;
+    width: 96px;
+    height: 209px;
+    cursor: pointer;
+}
+.piso3 .B13{
+    margin-left: 114px;
+    margin-top: 395px;
+    position: absolute;
+    width: 165px;
+    height: 107px;
+    cursor: pointer;
+}
+.piso3 .B14{
+    margin-left: 279px;
+    margin-top: 395px;
+    position: absolute;
+    width: 65px;
+    height: 107px;    
+    cursor: pointer;
+}
+.piso3 .B15{
+    margin-left: 344px;
+    margin-top: 395px;
+    position: absolute;
+    width: 183px;
+    height: 107px;    
+    cursor: pointer;
+}
+.piso3 .B16{
+    margin-left: 602px;
+    margin-top: 395px;
+    position: absolute;
+    width: 48px;
+    height: 107px;        
+    cursor: pointer;
+}
+.piso3 .B17{
+    margin-left: 648px;
+    margin-top: 395px;
+    position: absolute;
+    width: 118px;
+    height: 107px;        
+    cursor: pointer;
+}
+.piso3 .B18{
+    margin-left: 766px;
+    margin-top: 395px;
+    position: absolute;
+    width: 52px;
+    height: 107px;       
+    cursor: pointer;
+}
+.piso3 .B19{
+    margin-left: 818px;
+    margin-top: 395px;
+    position: absolute;
+    width: 139px;
+    height: 209px;       
+    cursor: pointer;
+}
+.piso3 .B20, .piso3 .B21,
+.piso3 .B22, .piso3 .B23, .piso3 .B24, .piso3 .B25, .piso3 .B26,
+.piso3 .B27, .piso3 .B28, .piso3 .B29, .piso3 .B30, .piso3 .B31,
+.piso3 .B32, .piso3 .B33, .piso3 .B34, .piso3 .B35, .piso3 .B36,
+.piso3 .B37, .piso3 .B38, .piso3 .B39, .piso3 .B40{
+    position: absolute;
+    background: none;
+    width: 1px;
+    height: 1px;
+}
+.piso3 .B1:hover,.piso3 .B2:hover,.piso3 .B3:hover,
+.piso3 .B4:hover,.piso3 .B5:hover,.piso3 .B6:hover,
+.piso3 .B7:hover,.piso3 .B8:hover,.piso3 .B9:hover,
+.piso3 .B10:hover,.piso3 .B11:hover,.piso3 .B12:hover,
+.piso3 .B13:hover,.piso3 .B14:hover,.piso3 .B15:hover,
+.piso3 .B16:hover,.piso3 .B17:hover,.piso3 .B18:hover,.piso3 .B19:hover{
+    background-color: #6dd5fa;
+    box-shadow: 0 0 10px #6dd5fa, 0 0 40px #6dd5fa, 0 0 80px #6dd5fa;
+}
+.pbof{
+    display: flex;
+    background-image: url("imagenes/PlantaBajaOf.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 835px;
+}
+.pbof .B1{
+    margin-left: 26px;
+    margin-top: 26.83px;
+    position: absolute;
+    width: 178.62px;
+    height: 116.53px;       
+    cursor: pointer;
+}
+.pbof .B2{
+    margin-left: 364.78px;
+    margin-top: 26px;
+    position: absolute;
+    width: 54.51px;
+    height: 90.54px;       
+    cursor: pointer;
+}
+.pbof .B3{
+    margin-left: 546.75px;
+    margin-top: 26px;
+    position: absolute;
+    width: 218.03px;
+    height: 90.54px;       
+    cursor: pointer;
+}
+.pbof .B4{
+    margin-left: 546.75px;
+    margin-top: 116.5px;
+    position: absolute;
+    width: 218.03px;
+    height: 88.03px;      
+    cursor: pointer;
+}
+.pbof .B5{
+    margin-left: 26.83px;
+    margin-top: 172.7px;
+    position: absolute;
+    width: 85.53px;
+    height: 31.86px;      
+    cursor: pointer;
+}
+.pbof .B6{
+    margin-left: 112.37px;
+    margin-top: 172.7px;
+    position: absolute;
+    width: 93.08px;
+    height: 36.05px;     
+    cursor: pointer;
+}
+.pbof .B7{
+    margin-left: 205.45px;
+    margin-top: 172.7px;
+    position: absolute;
+    width: 110.69px;
+    height: 36.05px;     
+    cursor: pointer;
+}
+.pbof .B8{
+    margin-left: 112.37px;
+    margin-top: 208.75px;
+    position: absolute;
+    width: 260.8px;
+    height: 123.24px;     
+    cursor: pointer;
+}
+.pbof .B9{
+    margin-left: 112.37px;
+    margin-top: 328.63px;
+    position: absolute;
+    width: 260.8px;
+    height: 134.14px;     
+    cursor: pointer;
+}
+.pbof .B10{
+    margin-left: 373.17px;
+    margin-top: 248.15px;
+    position: absolute;
+    width: 58.7px;
+    height: 181.08px;     
+    cursor: pointer;
+}
+.pbof .B11{
+    margin-left: 614.68px;
+    margin-top: 248.15px;
+    position: absolute;
+    width: 150.1px;
+    height: 181.08px;     
+    cursor: pointer;
+}
+.pbof .B12{
+    margin-left: 26.83px;
+    margin-top: 553.31px;
+    position: absolute;
+    width: 302.73px;
+    height: 250.67px;         
+    cursor: pointer;
+}
+.pbof .B13{
+    margin-left: 441.09px;
+    margin-top: 700.03px;
+    position: absolute;
+    width: 105.66px;
+    height: 103.96px;         
+    cursor: pointer;
+}
+.pbof .B14, .pbof .B15, .pbof .B16,
+.pbof .B17, .pbof .B18, .pbof .B19, .pbof .B20, .pbof .B21,
+.pbof .B22, .pbof .B23, .pbof .B24, .pbof .B25, .pbof .B26,
+.pbof .B27, .pbof .B28, .pbof .B29, .pbof .B30, .pbof .B31,
+.pbof .B32, .pbof .B33, .pbof .B34, .pbof .B35, .pbof .B36,
+.pbof .B37, .pbof .B38, .pbof .B39, .pbof .B40{
+    position: absolute;
+    background: none;
+    width: 1px;
+    height: 1px;
+}
+.pbof .B1:hover,.pbof .B2:hover,.pbof .B3:hover,
+.pbof .B4:hover,.pbof .B5:hover,.pbof .B6:hover,
+.pbof .B7:hover,.pbof .B8:hover,.pbof .B9:hover,
+.pbof .B10:hover,.pbof .B11:hover,.pbof .B12:hover,
+.pbof .B13:hover{
+    background-color: #6dd5fa;
+    box-shadow: 0 0 10px #6dd5fa, 0 0 40px #6dd5fa, 0 0 80px #6dd5fa;
+}
+.piso1of{
+    display: flex;
+    background-image: url("imagenes/Piso1Of.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 835px;
+}
+.piso1of .B1{
+    margin-left: 25px;
+    margin-top: 27px;
+    position: absolute;
+    width: 140px;
+    height: 92px;           
+    cursor: pointer;
+}
+.piso1of .B2{
+    margin-left: 164px;
+    margin-top: 27px;
+    position: absolute;
+    width: 106px;
+    height: 28px;           
+    cursor: pointer;
+}
+.piso1of .B3{
+    margin-left: 164px;
+    margin-top: 55px;
+    position: absolute;
+    width: 71px;
+    height: 31px;          
+    cursor: pointer;
+}
+.piso1of .B4{
+    margin-left: 164px;
+    margin-top: 86px;
+    position: absolute;
+    width: 71px;
+    height: 33px;          
+    cursor: pointer;
+}
+.piso1of .B5{
+    margin-left: 270px;
+    margin-top: 27px;
+    position: absolute;
+    width: 100px;
+    height: 28px;          
+    cursor: pointer;
+}
+.piso1of .B6{
+    margin-left: 300px;
+    margin-top: 55px;
+    position: absolute;
+    width: 70px;
+    height: 31px;          
+    cursor: pointer;
+}
+.piso1of .B7{
+    margin-left: 300px;
+    margin-top: 86px;
+    position: absolute;
+    width: 70px;
+    height: 33px;         
+    cursor: pointer;
+}
+.piso1of .B8{
+    margin-left: 399px;
+    margin-top: 27px;
+    position: absolute;
+    width: 105px;
+    height: 92px;         
+    cursor: pointer;
+}
+.piso1of .B9{
+    margin-left: 620px;
+    margin-top: 27px;
+    position: absolute;
+    width: 146px;
+    height: 92px;        
+    cursor: pointer;
+}
+.piso1of .B10{
+    margin-left: 620px;
+    margin-top: 119px;
+    position: absolute;
+    width: 146px;
+    height: 95px;
+    cursor: pointer;
+}
+.piso1of .B11{
+    margin-left: 25px;
+    margin-top: 119px;
+    position: absolute;
+    width: 40px;
+    height: 215px;
+    cursor: pointer;
+}
+.piso1of .B12{
+    margin-left: 105px;
+    margin-top: 150px;
+    position: absolute;
+    width: 120px;
+    height: 64px;
+    cursor: pointer;
+}
+.piso1of .B13{
+    margin-left: 225px;
+    margin-top: 150px;
+    position: absolute;
+    width: 140px;
+    height: 64px;
+    cursor: pointer;
+}
+.piso1of .B14{
+    margin-left: 367px;
+    margin-top: 150px;
+    position: absolute;
+    width: 137px;
+    height: 64px;
+    cursor: pointer;
+}
+.piso1of .B15{
+    margin-left: 105px;
+    margin-top: 215px;
+    position: absolute;
+    width: 260px;
+    height: 120px;
+    cursor: pointer;
+}
+.piso1of .B16{
+    margin-left: 25px;
+    margin-top: 335px;
+    position: absolute;
+    width: 40px;
+    height: 260px;
+    cursor: pointer;
+}
+.piso1of .B17{
+    margin-left: 105px;
+    margin-top: 335px;
+    position: absolute;
+    width: 260px;
+    height: 135px;
+    cursor: pointer;
+}
+.piso1of .B18{
+    margin-left: 25px;
+    margin-top: 595px;
+    position: absolute;
+    width: 80px;
+    height: 214px;
+    cursor: pointer;
+}
+.piso1of .B19{
+    margin-left: 105px;
+    margin-top: 680px;
+    position: absolute;
+    width: 95px;
+    height: 127px;
+    cursor: pointer;
+}
+.piso1of .B20{
+    margin-left: 200px;
+    margin-top: 680px;
+    position: absolute;
+    width: 125px;
+    height: 127px;
+    cursor: pointer;
+}
+.piso1of .B21{
+    margin-left: 325px;
+    margin-top: 680px;
+    position: absolute;
+    width: 95px;
+    height: 127px;
+    cursor: pointer;
+}
+.piso1of .B22{
+    margin-left: 419px;
+    margin-top: 628px;
+    position: absolute;
+    width: 345px;
+    height: 180px;
+    cursor: pointer;
+}
+.piso1of .B23, .piso1of .B24, .piso1of .B25, .piso1of .B26,
+.piso1of .B27, .piso1of .B28, .piso1of .B29, .piso1of .B30, .piso1of .B31,
+.piso1of .B32, .piso1of .B33, .piso1of .B34, .piso1of .B35, .piso1of .B36,
+.piso1of .B37, .piso1of .B38, .piso1of .B39, .piso1of .B40{
+    position: absolute;
+    background: none;
+    width: 1px;
+    height: 1px;
+}
+.piso1of .B1:hover,.piso1of .B2:hover,.piso1of .B3:hover,
+.piso1of .B4:hover,.piso1of .B5:hover,.piso1of .B6:hover,
+.piso1of .B7:hover,.piso1of .B8:hover,.piso1of .B9:hover,
+.piso1of .B10:hover,.piso1of .B11:hover,.piso1of .B12:hover,
+.piso1of .B13:hover,.piso1of .B14:hover,.piso1of .B15:hover,
+.piso1of .B16:hover,.piso1of .B17:hover,.piso1of .B18:hover,
+.piso1of .B19:hover,.piso1of .B20:hover,.piso1of .B21:hover,
+.piso1of .B22:hover{
+    background-color: #6dd5fa;
+    box-shadow: 0 0 10px #6dd5fa, 0 0 40px #6dd5fa, 0 0 80px #6dd5fa;
+}
+.esc{
+    display: flex;
+    background-image: url("imagenes/Esc.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 855px;
+}
+.esc .B1,
+.esc .B2, .esc .B3, .esc .B4, .esc .B5, .esc .B6,
+.esc .B7, .esc .B8, .esc .B9, .esc .B10, .esc .B11,
+.esc .B12, .esc .B13, .esc .B14, .esc .B15, .esc .B16,
+.esc .B17, .esc .B18, .esc .B19, .esc .B20, .esc .B21,
+.esc .B22, .esc .B23, .esc .B24, .esc .B25, .esc .B26,
+.esc .B27, .esc .B28, .esc .B29, .esc .B30, .esc .B31,
+.esc .B32, .esc .B33, .esc .B34, .esc .B35, .esc .B36,
+.esc .B37, .esc .B38, .esc .B39, .esc .B40{
+    position: absolute;
+    background: none;
+    width: 1px;
+    height: 1px;
+}
+.opc{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+select{
+    color: white;
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+option{
+    background: #000;
+}
+
+/*Botón*/
+.menu{
+    margin-left: 10px;
+    height:60px;
+    width: 60px;
+    border-radius: 10px;
+}
+.drop-button{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url("imagenes/menu.png");
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    height: 380px;
+    width: 265px;
+}
+.show {
+    display: block;
+}
+.foto{
+    height: 50%;
+    background: #60bde8;
+}
+.d2{
+    background: #60bde8;
+    margin-left: 3%;
+}
+.menudat2{
+    width: 100%;
+    height: 58px;
+    background: #60bde8;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.d1{
+    background: #003147;
+    margin-left: 3%;
+}
+.menudat1{
+    width: 100%;
+    height: 58px;
+    background: #003147;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.BC{
+    background: #003147;
+    height: 60%;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 15px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.BC:hover{
+    background-color: #6dd5fa;
+    box-shadow: 0 0 10px #6dd5fa, 0 0 40px #6dd5fa, 0 0 80px #6dd5fa;
+}
+.cons{
+    border-collapse: collapse;
+    overflow: hidden;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.cons th{
+    padding: 10px;
+    background: #373b44; 
+    color: white;
+}
+.cons td{
+    padding: 10px;
+    background: #335ec3;
+    color: white;
+}
+
+.menu2{
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 15%;
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+}
+svg, #symbol{
+    background: none;
+    margin-left: 60%;
+    margin-right: 60%;
+}
+.ser{
+    background: none;
+}
+.sere{
+    background: lightblue;
+}
+.se{
+    margin-left: 45%;
+    margin-right: 45%;
+}

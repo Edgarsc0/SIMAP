@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SIMAP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body oncopy="return false" onpaste="return false" ondragstart="return false" ondrop="return false">
+        <div class="encabezado">
+            <h1>ALUMNO</h1>
+        </div>
+        <form method="post" action="Reg-alumno.jsp">
+            <div class="mainForm">
+                <input type="text" name="boleta" placeholder="BOLETA" maxlength="10" onkeypress="return validarn(event)" required>
+                <input type="password" name="contra" placeholder="CONTRASEÑA" maxlength="20" onkeypress="return validarnl(event)" required>
+                <select class="sec" name="grupo" required>
+                    <option hidden selected value="">GRUPO</option>
+                    <option>4IV7</option>
+                    <option>4IV8</option>
+                    <option>4IV9</option>
+                </select>
+                <input type="text" name="nombre" placeholder="Nombre(s)" maxlength="20" onkeypress="return validarl(event)" required>
+                <input type="text" name="appat" placeholder="Apellido Paterno" maxlength="20" onkeypress="return validarl(event)" required>
+                <input type="text" name="apmat" placeholder="Apellido Materno" maxlength="20" onkeypress="return validarl(event)" required>
+                <input class="enviar" type="submit" value="REGISTRAR">
+            </div>
+        </form>
+        <div class="flecha">
+            <a href="Reg.html"><button class="atras">ATRAS</button></a>
+        </div>
+        <script src="ac.js"></script>
+    </body>
+</html>
