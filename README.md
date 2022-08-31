@@ -7,5 +7,3 @@
 Suban todo el proyecto en un .rar porque el proveedor de la base de datos puede dectectar las credenciales en las lineas de codigo y de inmediado cambiar todo.</p>
 <br>
 <br>
-
-<img src="https://github.com/Edgarsc0/SIMAP/blob/main/SIMAP/src/main/webapp/imagenes/logo.jpg">
